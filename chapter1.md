@@ -1,5 +1,5 @@
 ---
-title: 'Chapter Title Here'
+title: 'Processing Speech Data with Python'
 description: 'Chapter description goes here.'
 free_preview: true
 ---
@@ -21,8 +21,6 @@ How about another similar soundwave? One slightly different?
 In this exercise, we're going to plot the soundwave of `good_morning` against `good_afternoon`.
 
 To have the `good_morning` and `good_afternoon` soundwaves on the same plot and distinguishable from eachother, we'll use Matplotlib's `alpha` parameter.
-
-
 
 `@instructions`
 1. Set the title to reflect what kind of plot we are making
@@ -99,6 +97,59 @@ plt.gca().legend(('Good Afternoon', 'Good Morning'))
 
 # Show the plot
 plt.show()
+```
+
+`@sct`
+```{python}
+
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: TabExercise
+key: 74985c4c1f
+xp: 100
+```
+
+Trying to hear what someone is saying in a crowded place is harder than when you're face to face in a room. It's the same with transcribing speech to text. If there's noise in the background, it can be hard to accurately pickup the words being spoken.
+
+To handle this, the models powering many speech recognition APIs have been trained on many different types of speech audio. So depending on how much noise in the background of your speech files, you still may get fairly good results.
+
+If not, the `Recognizer()` class has a method which may help. `adjust_for_ambient_noise` listens for background noise at the beginning of an audio file and tries to set the `Recognizer()` energy level (the amount it listens) to an appropriate setting.
+
+`@pre_exercise_code`
+```{python}
+import speech_recognition as sr
+recognizer = sr.Recognizer()
+clean_support_call = sr.AudioFile("clean-support-call.wav")
+noisy_support_call = sr.AudioFile("noisy-support-call.wav")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 3fcc8b352c
+xp: 100
+```
+
+`@instructions`
+
+
+`@hint`
+
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+
 ```
 
 `@sct`
