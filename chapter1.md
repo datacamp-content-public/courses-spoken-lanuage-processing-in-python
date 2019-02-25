@@ -106,7 +106,7 @@ plt.show()
 
 ---
 
-## Insert exercise title here
+## Chapter 2 Capstone Exercise
 
 ```yaml
 type: TabExercise
@@ -133,7 +133,7 @@ noisy_support_call = sr.AudioFile("noisy-support-call.wav")
 ```yaml
 type: NormalExercise
 key: 3fcc8b352c
-xp: 100
+xp: 35
 ```
 
 `@instructions`
@@ -150,6 +150,94 @@ xp: 100
 `@solution`
 ```{python}
 
+```
+
+`@sct`
+```{python}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: b496cf1246
+xp: 35
+```
+
+`@instructions`
+A clean audio sample has been imported as `clean_support_call`.
+
+Pass `clean_support_call` to the `with` statement to extract the audio and save it to `clean_support_call_audio`.
+
+Then call `recognize_google` on `clean_support_call_audio`.
+
+>play audio
+
+`@hint`
+The source of our audio file is `clean_support_call`.
+
+`@sample_code`
+```{python}
+# Record the audio from the clean support call
+with ______ as source:
+  clean_support_call_audio = recognizer.record(source)
+
+# Transcribe the speech from the clean support call
+recognizer.recognize_google(______)
+```
+
+`@solution`
+```{python}
+# Record the audio from the clean support call
+with clean_support_call as source:
+  clean_support_call_audio = recognizer.record(source)
+
+# Transcribe the speech from the clean support call
+recognizer.recognize_google(clean_support_call_audio)
+```
+
+`@sct`
+```{python}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 1e52498b6d
+xp: 30
+```
+
+`@instructions`
+We'll now do the same as before but this time with a noisy audio file.
+
+The noisy audio file is saved under `noisy_support_call`.
+
+Extract the audio in the `with` statement and then transcribe the speech with `recognize_google`.
+
+`@hint`
+The audio `source` is stored in `noisy_support_call`.
+
+`@sample_code`
+```{python}
+# Record the audio from the noisy support call
+with ______ as source:
+  noisy_support_call_audio = recognizer.record(source)
+
+# Transcribe the speech from the clean support call
+recognizer.recognize_google(______)
+```
+
+`@solution`
+```{python}
+# Record the audio from the noisy support call
+with noisy_support_call as source:
+  noisy_support_call_audio = recognizer.record(source)
+
+# Transcribe the speech from the clean support call
+recognizer.recognize_google(noisy_support_call_audio)
 ```
 
 `@sct`
