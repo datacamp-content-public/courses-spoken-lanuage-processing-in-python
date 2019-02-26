@@ -29,7 +29,8 @@ To have the `good_morning` and `good_afternoon` soundwaves on the same plot and 
 4. Set the alpha variable to a value between `0.5` and `0.7`.
 
 `@hint`
-The `.plot()` method takes arguments in the form of (`x_value`, `y_value`).
+- The `.plot()` method takes arguments in the form of (`x_value`, `y_value`).
+- The `alpha` value should be equal to something between `0.5` and `0.7`.
 
 `@pre_exercise_code`
 ```{python}
@@ -101,7 +102,7 @@ plt.show()
 
 `@sct`
 ```{python}
-
+success_msg("Great effort! Notice the two sound waves are very similar in the beginning. Because the first word is `good` is both audio files, they almost completely overlap. A well-built speech recognition system would recognize this and return the same first word for each wave. Let's build one to do just that.")
 ```
 
 ---
