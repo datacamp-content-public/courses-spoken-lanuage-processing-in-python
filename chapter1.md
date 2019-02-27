@@ -245,3 +245,79 @@ recognizer.recognize_google(noisy_support_call_audio)
 ```{python}
 
 ```
+
+---
+
+## Chapter 3 Capstone Exercise
+
+```yaml
+type: NormalExercise
+key: db0e943fdb
+xp: 100
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+
+```
+
+`@sct`
+```{python}
+
+```
+
+---
+
+## Chapter 4 Capstone Exercise
+
+```yaml
+type: NormalExercise
+key: 28a7b53953
+xp: 100
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+
+```
+
+`@sct`
+```{python}
+
+```
