@@ -227,7 +227,7 @@ The audio `source` is stored in `noisy_support_call`.
 with ______ as source:
   noisy_support_call_audio = recognizer.record(source)
 
-# Transcribe the speech from the clean support call
+# Transcribe the speech from the noisy support call
 recognizer.recognize_google(______)
 ```
 
@@ -239,6 +239,56 @@ with noisy_support_call as source:
 
 # Transcribe the speech from the clean support call
 recognizer.recognize_google(noisy_support_call_audio)
+```
+
+`@sct`
+```{python}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 01f0ebe3cd
+```
+
+`@instructions`
+The `recognizer()` class picked up on a few words but the transcription isn't anywhere near as good as the clean audio.
+
+We'll try to fix this poor transcription with the `adjust_for_ambient_noise()` function.
+
+The function takes an audio `source` and `duration` as inputs.
+
+`duration` is how long the `recognizer()` class listens to the audio to adjust the energy threshold (the amount of listening).
+
+Try to improve the audio transcription of `noisy_support_call` by calling the `adjust_for_ambient_noise` function on the `recognizer()` class and passing it a `duration` of 0.5.
+
+`@hint`
+The `adjust_for_ambient_noise` function takes `source` and `duration` as inputs in the form `recognizer.adjust_for_ambient_noise(source, duration=int()).
+
+`@sample_code`
+```{python}
+# Record the audio from the noisy support call
+with noisy_support_call as source:
+	# Adjust the recognizer energy threshold for ambient noise
+    recognizer.adjust_for_ambient_noise(source, duration=____)
+    noisy_support_call_audio = recognizer.record(____)
+ 
+# Transcribe the speech from the noisy support call
+recognizer.recognize_google(____)
+```
+
+`@solution`
+```{python}
+# Record the audio from the noisy support call
+with noisy_support_call as source:
+	# Adjust the recognizer energy threshold for ambient noise
+    recognizer.adjust_for_ambient_noise(source, duration=0.5)
+    noisy_support_call_audio = recognizer.record(source)
+ 
+# Transcribe the speech from the noisy support call
+recognizer.recognize_google(noisy_support_call_audio, show_all=True)
 ```
 
 `@sct`
