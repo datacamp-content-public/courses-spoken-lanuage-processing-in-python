@@ -306,7 +306,9 @@ key: db0e943fdb
 xp: 100
 ```
 
+Converting audio files one by one is fine if you've got a small amount of files. But what if you've got a whole folder of different speech files?
 
+In this exercise, we'll look at how to use `PyDub`'s `from_file()` and `export()` functions to go through a number of files with the wrong file type and convert them to `.wav` so they're compatible with the `recognizer()` class.
 
 `@instructions`
 
@@ -316,7 +318,14 @@ xp: 100
 
 `@pre_exercise_code`
 ```{python}
+import os
+import glob
 
+extension_list = ('*.mp4', '*.mp3', '*.m4a', '*.aac')
+
+os.chdir(wrong_types_dir)
+
+folder = glob.glob(extension)
 ```
 
 `@sample_code`
@@ -326,7 +335,14 @@ xp: 100
 
 `@solution`
 ```{python}
-
+for extension in extension_list:
+    for audio_file in folder:
+        # Create the new file name
+        wav_filename = os.path.splitext(os.path.basename(audio_file))[0] + '.wav'
+        # Export and convert the original files to .wav
+        AudioSegment.from_file(audio_file).export(wav_filename, format='wav')
+        print(f"Creating {wav_filename}...")
+        print("Done")
 ```
 
 `@sct`
