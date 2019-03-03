@@ -378,7 +378,7 @@ for extension in extension_list:
 
 ---
 
-## Chapter 4 Capstone Exercise
+## Chapter 4 Capstone Exercise - Build a classification model
 
 ```yaml
 type: NormalExercise
@@ -386,27 +386,73 @@ key: 28a7b53953
 xp: 100
 ```
 
+Now we've turned our transcribed audio data into Pandas dataframes, we'll build a model to classify what category our `update_order_details_text` belongs to.
 
+You may be able to tell what category it belongs to straight away by looking at it, but what if you had 100's or 1000's of transcribed text files you wanted to classify?
+
+To build the model we're going to be using `sklearn`'s `CountVectorizer` class to convert the text into numbers so the `MultinomialNB` class can learn what's different about them.
+
+The data the model will train on is stored in `df_train`. The text in this dataframe already has labels.
+
+The data the model will predict on is stored in `df_test`. The text in this dataframe doesn't have a label.
+
+This model will work on our small example here but for larger amounts of text, you may want to consider something more sophisticated.
+
+Once you've transcribed your audio into text using what you've learned in this course, you can learn about more advanced text processing techniques in [DataCamp's XYZ path...]? 
+
+TK - NOTE: This would probably be better as a sequential exercise (step by step creating the classifier pipeline)
 
 `@instructions`
-
+- Create `test_features` using `df_test`
+- Fit the model on `training_features`
+- Use the model to predict the class of `test_features`
 
 `@hint`
-
+- The model is `.fit()` on `training_features` and makes a prediction on `test_features`.
 
 `@pre_exercise_code`
 ```{python}
+import pandas as pd
+df_train = pd.DataFrame([{'text': complaint_text, 'class': 1}, 
+                         {'text': wrong_size_order_text, 'class': 0}])
 
+df_test = pd.DataFrame([{'text': update_order_details_text, 'class': 'unknown'}])
 ```
 
 `@sample_code`
 ```{python}
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.feature_extraction.text import CountVectorizer
 
+# Create the vectorizer and use it to convert the text into numbers
+vectorizer = CountVectorizer()
+training_features = vectorizer.fit_transform(df_train["text"])
+test_features = vectorizer.transform(____["text"])
+
+# Create and fit the model on training_features, with the class column as labels
+model = MultinomialNB()
+model.fit(____, df_train["class"])
+
+# Use the model to predict the class of the test_features
+print(model.predict(____))
 ```
 
 `@solution`
 ```{python}
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.feature_extraction.text import CountVectorizer
 
+# Create the vectorizer and use it to convert the text into numbers
+vectorizer = CountVectorizer()
+training_features = vectorizer.fit_transform(df_train["text"])
+test_features = vectorizer.transform(df_test["text"])
+
+# Create and fit the model on training_features, with the class column as labels
+model = MultinomialNB()
+model.fit(training_features, df_train["class"])
+
+# Use the model to predict the class of the test_features
+print(model.predict(test_features))
 ```
 
 `@sct`
