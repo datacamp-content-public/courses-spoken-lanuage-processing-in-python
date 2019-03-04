@@ -189,10 +189,12 @@ We'll now do the same as before but this time with a noisy audio file.
 
 The noisy audio file is saved under `noisy_support_call`.
 
+> play audio
+
 Extract the audio in the `with` statement and then transcribe the speech with `recognize_google`.
 
 `@hint`
-The audio `source` is stored in `noisy_support_call`.
+- The audio `source` is stored in `noisy_support_call`.
 
 `@sample_code`
 ```{python}
