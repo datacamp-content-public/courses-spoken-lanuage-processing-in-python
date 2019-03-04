@@ -373,7 +373,7 @@ for extension in extension_list:
 
 `@sct`
 ```{python}
-
+success_msg("Woohoo! You've successfully converted the folder of audio files from being non-compatiable with `speech_recognition` to being compatible!")
 ```
 
 ---
