@@ -111,7 +111,7 @@ recognizer = sr.Recognizer()
 
 `@sct`
 ```{python}
-
+success_msg("Boom! Time to start recognizing some speech!")
 ```
 
 ---
