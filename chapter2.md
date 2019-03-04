@@ -133,6 +133,10 @@ Which of the following is not a speech recognition API within the `speech_recogn
 - `recognize_google()`
 - `recognize_bing()`
 - `recognize_wit()`
-- `what_does_this_say()`
+- [`what_does_this_say()`]
 
 `@feedback`
+- This answer is available in the `speech_recognition` library.
+- Close! But this function is apart of the `speech_recognition` library, remember, the question is asking which one is not.
+- If you tried to call this function on the Recognizer() class it would work! Try another.
+- Excellent! All of the Recognizer() class API calls begin with `recognize_`.
