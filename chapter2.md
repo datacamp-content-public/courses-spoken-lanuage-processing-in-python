@@ -58,7 +58,7 @@ import speech_recognition as sr
 
 ---
 
-## Insert exercise title here
+## Create an instance of the Recognizer() class
 
 ```yaml
 type: NormalExercise
@@ -86,7 +86,7 @@ Remember, the `speech_recognition` library has been imported as `sr`.
 - Access the `Recognizer()` class from the `speech_recognition` library and save it to `recognizer`
 
 `@hint`
-
+- The `speech_recognition` library has been imported as `sr`
 
 `@pre_exercise_code`
 ```{python}
@@ -95,12 +95,18 @@ Remember, the `speech_recognition` library has been imported as `sr`.
 
 `@sample_code`
 ```{python}
+import speech_recognition as sr
 
+# Create an instance of the Recognizer() class
+recognizer = ____.Recognizer()
 ```
 
 `@solution`
 ```{python}
+import speech_recognition as sr
 
+# Create an instance of the Recognizer() class
+recognizer = sr.Recognizer()
 ```
 
 `@sct`
