@@ -53,7 +53,7 @@ import speech_recognition as sr
 
 `@sct`
 ```{python}
-
+success_msg("The most important step done! Now you're ready to start accessing the `speech_recognition` library.")
 ```
 
 ---
