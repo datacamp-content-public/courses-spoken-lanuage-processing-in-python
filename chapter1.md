@@ -133,35 +133,6 @@ noisy_support_call = sr.AudioFile("noisy-support-call.wav")
 
 ```yaml
 type: NormalExercise
-key: 3fcc8b352c
-xp: 35
-```
-
-`@instructions`
-
-
-`@hint`
-
-
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-
-```
-
-`@sct`
-```{python}
-
-```
-
-***
-
-```yaml
-type: NormalExercise
 key: b496cf1246
 xp: 35
 ```
@@ -178,7 +149,7 @@ Then call `recognize_google` on `clean_support_call_audio`.
 >play audio
 
 `@hint`
-The source of our audio file is `clean_support_call`.
+- The source of our audio file is `clean_support_call`.
 
 `@sample_code`
 ```{python}
@@ -210,7 +181,7 @@ success_msg("Nice! Since the audio was clear, the Google Speech API was able to 
 ```yaml
 type: NormalExercise
 key: 1e52498b6d
-xp: 30
+xp: 35
 ```
 
 `@instructions`
@@ -253,6 +224,7 @@ success_msg("This time wasn't so great. The added noise in the background meant 
 ```yaml
 type: NormalExercise
 key: 01f0ebe3cd
+xp: 30
 ```
 
 `@instructions`
