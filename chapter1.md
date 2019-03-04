@@ -241,7 +241,7 @@ The function takes an audio `source` and `duration` as inputs.
 Try to improve the audio transcription of `noisy_support_call` by calling the `adjust_for_ambient_noise` function on the `recognizer()` class and passing it a `duration` of 0.5.
 
 `@hint`
-The `adjust_for_ambient_noise` function takes `source` and `duration` as inputs in the form `recognizer.adjust_for_ambient_noise(source, duration=int()).
+- The `adjust_for_ambient_noise` function takes `source` and `duration` as inputs in the form `recognizer.adjust_for_ambient_noise(source, duration=int()).
 
 `@sample_code`
 ```{python}
