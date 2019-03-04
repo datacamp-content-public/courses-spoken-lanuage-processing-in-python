@@ -457,5 +457,5 @@ print(model.predict(test_features))
 
 `@sct`
 ```{python}
-
+success_msg("Consider it classified! Now you're ready to start capturing speech, converting it to text and classifying it into different categories. Massive effort!")
 ```
