@@ -293,7 +293,7 @@ recognizer.recognize_google(noisy_support_call_audio, show_all=True)
 
 `@sct`
 ```{python}
-
+success_msg("Well, the results still weren't to good. This should be expected with some audio files though, sometimes the background noise is too much. If your audio files have a large amount of background noise, you may need to preprocess them with an audio tool such as Audacity before using them with `speech_recognition`.")
 ```
 
 ---
