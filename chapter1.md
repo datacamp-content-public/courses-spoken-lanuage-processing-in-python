@@ -107,7 +107,7 @@ success_msg("Great effort! Notice the two sound waves are very similar in the be
 
 ---
 
-## Chapter 2 Capstone Exercise
+## Chapter 2 Capstone Exercise - Working with noisy audio
 
 ```yaml
 type: TabExercise
@@ -167,6 +167,8 @@ xp: 35
 ```
 
 `@instructions`
+In this exercise, we'll start by transcribing a clean speech sample to text and then see what happens when we add some background noise.
+
 A clean audio sample has been imported as `clean_support_call`.
 
 Pass `clean_support_call` to the `with` statement to extract the audio and save it to `clean_support_call_audio`.
