@@ -200,7 +200,7 @@ recognizer.recognize_google(clean_support_call_audio)
 
 `@sct`
 ```{python}
-
+success_msg("Nice! Since the audio was clear, the Google Speech API was able to transcribe the spoken words perfectly.")
 ```
 
 ***
