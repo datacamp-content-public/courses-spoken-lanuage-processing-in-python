@@ -113,3 +113,26 @@ recognizer = sr.Recognizer()
 ```{python}
 
 ```
+
+---
+
+## Pick the speech_recognition API
+
+```yaml
+type: PureMultipleChoiceExercise
+key: b3a3ddeee5
+xp: 50
+```
+
+Which of the following is not a speech recognition API within the `speech_recognition` library?
+
+`@hint`
+- All of the speech recognition API calls begin with `recognize_`
+
+`@possible_answers`
+- `recognize_google()`
+- `recognize_bing()`
+- `recognize_wit()`
+- `what_does_this_say()`
+
+`@feedback`
