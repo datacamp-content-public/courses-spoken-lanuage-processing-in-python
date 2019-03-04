@@ -274,7 +274,7 @@ success_msg("Well, the results still weren't to good. This should be expected wi
 
 ---
 
-## Chapter 3 Capstone Exercise
+## Chapter 3 Capstone Exercise - Manipulating multiple audio files with PyDub
 
 ```yaml
 type: NormalExercise
@@ -299,7 +299,7 @@ The code goes through each extension in the `extension_list` and each audio file
 - Export the `audio_file` with the format 'wav'
 
 `@hint`
-The format variable accepts a string as input.
+- The format variable accepts a string as input.
 
 `@pre_exercise_code`
 ```{python}
