@@ -243,7 +243,7 @@ recognizer.recognize_google(noisy_support_call_audio)
 
 `@sct`
 ```{python}
-
+success_msg("This time wasn't so great. The added noise in the background meant the Google Speech API couldn't decipher the words very well. Let's try adjusting for ambient noise.")
 ```
 
 ***
